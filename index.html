@@ -3,24 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ylamanti.dev // Minimalist Dev Log</title>
-    <!-- Importation des Google Fonts : Moderne & Lisible -->
+    <title>Le blog de Yasmine</title>
+    <!-- Une police super fine, élégante et moderne -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Palette Aesthetic Soft Dark */
-            --bg: #0f172a; /* Fond gris-bleu foncé doux */
-            --surface: #1e293b; /* Cartes gris légèrement plus clair */
-            --border: #334155; /* Bordures subtiles */
-            --text-main: #f1f5f9; /* Texte presque blanc doux */
-            --text-muted: #94a3b8; /* Texte secondaire gris */
-            
-            /* Couleurs d'accent Pastel & Fraîches */
-            --accent-purple: #c4b5fd; /* Violet Lavande Doux */
-            --accent-green: #4ade80; /* Vert Menthe Vif */
-            --accent-blue: #7dd3fc; /* Bleu Ciel Pastel */
+            /* Palette Coquette / Minimalist Beige & Rose */
+            --bg: #faf6f0;          /* Fond crème/beige très doux */
+            --text-main: #2d2a29;   /* Texte foncé doux (pas de noir pur agressif) */
+            --text-muted: #7c7571;  /* Texte secondaire atténué */
+            --accent-rose: #f3d5d8; /* Rose poudré délicat */
+            --rose-hover: #e8be0e;
         }
 
         * {
@@ -32,289 +27,198 @@
         body {
             background-color: var(--bg);
             color: var(--text-main);
-            font-family: 'Inter', -apple-system, sans-serif; /* Police de corps moderne */
-            line-height: 1.6;
-            padding: 3rem 1.5rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 400;
+            line-height: 1.7;
+            padding: 4rem 2rem;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
         }
 
-        /* HEADER & PROFIL */
+        /* HEADER (Exactement comme ta maquette) */
         header {
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 2.5rem;
-            margin-bottom: 2.5rem;
+            margin-bottom: 5rem;
+        }
+
+        .header-top {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
+            align-items: baseline;
+            margin-bottom: 0.8rem;
         }
 
-        .profile h1 {
-            font-family: 'Poppins', sans-serif; /* Police géométrique stylée */
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .profile p {
-            color: var(--text-muted);
-            font-size: 1.2rem;
-            margin-top: 0.3rem;
+        header h1 {
+            font-size: 1.6rem;
             font-weight: 500;
+            letter-spacing: -0.02em;
         }
 
-        .badge-recherche {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(74, 222, 128, 0.1);
-            color: var(--accent-green);
-            border: 1px solid rgba(74, 222, 128, 0.2);
-            padding: 0.4rem 1rem;
-            border-radius: 99px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-top: 0.8rem;
-        }
-
-        .links a {
-            color: var(--accent-blue);
+        .nav-links a {
+            color: var(--text-main);
             text-decoration: none;
-            margin-left: 1.5rem;
-            font-weight: 500;
             font-size: 1rem;
+            margin-left: 1.5rem;
+            font-weight: 400;
             transition: color 0.2s;
+            border-bottom: 1px transparent;
         }
 
-        .links a:hover {
-            color: var(--accent-purple);
+        .nav-links a:hover {
+            color: #b8878f;
+            border-bottom: 1px solid #b8878f;
         }
 
-        /* SECTION LAYOUT */
+        header .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-main);
+            font-weight: 400;
+        }
+
+        /* DISPOSITION DE LA MAQUETTE EN 2 COLONNES */
         main {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2.5rem;
+            grid-template-columns: 1.8fr 1fr;
+            gap: 4rem;
+            align-items: start;
         }
 
         @media (max-width: 768px) {
             main {
                 grid-template-columns: 1fr;
+                gap: 3rem;
             }
         }
 
-        /* ARTICLES DE BLOG (MODERNES) */
-        .section-title {
-            font-family: 'Poppins', sans-serif;
+        /* COLONNE GAUCHE : MON QUOTIDIEN */
+        .column-title {
             font-size: 1.3rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15rem;
-            color: var(--text-muted);
-            margin-bottom: 1.8rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .section-title::after {
-            content: "";
-            flex: 1;
-            height: 1px;
-            background: var(--border);
-        }
-
-        article {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px; /* Coins plus arrondis pour le côté doux */
-            padding: 2rem;
-            margin-bottom: 2rem;
-            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-        }
-
-        article:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent-purple);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
-        }
-
-        .meta {
-            font-family: 'IBM Plex Mono', monospace; /* Police monospace moderne */
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 0.8rem;
-            font-weight: 400;
-        }
-
-        article h3 {
-            font-family: 'Poppins', sans-serif;
-            color: #ffffff;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        article p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-        }
-
-        .tech-tags {
-            display: flex;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-        }
-
-        .tech-tag {
-            display: inline-block;
-            background: rgba(196, 181, 253, 0.1); /* Fond lavande subtil */
-            color: var(--accent-purple);
-            font-size: 0.85rem;
-            font-family: 'IBM Plex Mono', monospace;
-            padding: 0.3rem 0.8rem;
-            border-radius: 6px;
             font-weight: 500;
-        }
-
-        /* SIDEBAR (STACK & BIO) */
-        aside .card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        aside h4 {
-            font-family: 'Poppins', sans-serif;
-            color: #ffffff;
-            margin-bottom: 1.2rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .stack-list {
-            list-style: none;
-        }
-
-        .stack-list li {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 1rem;
-            margin-bottom: 0.6rem;
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
+            margin-bottom: 2.5rem;
             color: var(--text-main);
         }
 
-        .stack-list li::before {
-            content: "✦"; /* Symbole plus doux que ">" */
-            color: var(--accent-blue);
-            font-weight: bold;
+        article {
+            margin-bottom: 3.5rem;
+        }
+
+        article .date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        article h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 0.6rem;
+            color: var(--text-main);
+        }
+
+        article p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* COLONNE DROITE : A PROPOS */
+        aside .section-aside {
+            margin-bottom: 3.5rem;
+        }
+
+        aside h4 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        aside p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 300;
         }
 
         .btn-cv {
-            display: block;
-            width: 100%;
-            background: var(--accent-blue);
-            color: #000; /* Texte noir sur bouton clair */
-            text-align: center;
-            padding: 0.9rem;
-            border-radius: 8px;
+            display: inline-block;
+            color: var(--text-main);
             text-decoration: none;
-            font-weight: 600;
-            margin-top: 1.5rem;
-            transition: opacity 0.2s, transform 0.1s;
+            font-size: 1rem;
+            font-weight: 400;
+            background: var(--accent-rose);
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            margin-top: 0.5rem;
+            transition: background 0.2s, transform 0.1s;
         }
 
         .btn-cv:hover {
-            opacity: 0.9;
+            background: #ebd0d3;
+            transform: translateY(-1px);
         }
 
-        .btn-cv:active {
-            transform: scale(0.98);
+        /* PETITS TAGS PROJETS */
+        .project-item {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 300;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- EN-TÊTE DU SITE -->
+        <!-- EN-TÊTE -->
         <header>
-            <div class="profile">
-                <h1>ylamanti .dev</h1>
-                <p>Étudiante en Informatique & Dev Web</p>
-                <div class="badge-recherche">
-                    <span>⚡</span> Cherche Alternance (Sept. 2026)
+            <div class="header-top">
+                <h1>Le blog de Yasmine</h1>
+                <div class="nav-links">
+                    <a href="https://github.com/ylamanti" target="_blank">github</a>
+                    <a href="https://linkedin.com/in/ylamanti" target="_blank">linkedin</a>
+                    <a href="#" target="_blank">portfolio</a>
                 </div>
             </div>
-            <div class="links">
-                <a href="https://github.com/ylamanti" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/ylamanti" target="_blank">LinkedIn</a>
-            </div>
+            <p class="subtitle">Etudiante en prépa intégrée en école d’ingénieur en informatique</p>
         </header>
 
-        <!-- CONTENU PRINCIPAL -->
+        <!-- GRILLE PRINCIPALE -->
         <main>
-            <!-- COLONNE BLOG -->
+            <!-- COLONNE GAUCHE -->
             <section>
-                <h2 class="section-title">Mon Dev Log</h2>
+                <h2 class="column-title">Mon quotidien</h2>
 
                 <!-- Article 1 -->
                 <article>
-                    <div class="meta">15 Juin 2026 • 3 min read</div>
-                    <h3>Comment j'ai crashé mon premier script Node.js (et ce que j'ai appris)</h3>
-                    <p>Récit d'une boucle infinie mémorable qui a fait souffler le processeur de mon PC, et comment j'ai enfin compris l'importance des conditions d'arrêt en JS.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">#javascript</span>
-                        <span class="tech-tag">#nodejs</span>
-                        <span class="tech-tag">#debug</span>
-                    </div>
+                    <div class="date">15 Juin 2026</div>
+                    <h3>Comment j'organise mes projets de prépa sans paniquer</h3>
+                    <p>Entre les maths, la physique et les projets de dev, j'ai dû trouver une méthode d'organisation carrée. Je vous partage mes outils favoris et mes galères.</p>
                 </article>
 
                 <!-- Article 2 -->
                 <article>
-                    <div class="meta">02 Juin 2026 • 5 min read</div>
-                    <h3>Pourquoi j'ai choisi de coder ce blog sans CMS</h3>
-                    <p>Pour prouver mes compétences aux recruteurs, j'ai décidé de bannir WordPress et d'écrire mon propre code. Voici ma structure HTML/CSS minimaliste.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">#html</span>
-                        <span class="tech-tag">#css</span>
-                        <span class="tech-tag">#architecture</span>
-                    </div>
+                    <div class="date">02 Juin 2026</div>
+                    <h3>Mon premier algorithme de tri en Python</h3>
+                    <p>Retour sur le TP de la semaine dernière où on a dû recréer un tri à bulles. Explication simple de comment ça marche derrière l'écran.</p>
                 </article>
             </section>
 
-            <!-- COLONNE INFOS / STACK -->
+            <!-- COLONNE DROITE -->
             <aside>
-                <h2 class="section-title">À propos</h2>
-                
-                <div class="card">
-                    <h4>Moi en bref</h4>
-                    <p style="font-size: 0.95rem; color: var(--text-muted); font-weight: 400;">
-                        J'ai 18 ans, passionnée d'info, et je documente mon parcours de junior pour montrer ce que j'ai dans le ventre.
-                    </p>
-                    <a href="#" class="btn-cv">📄 Télécharger mon CV</a>
+                <div class="section-aside">
+                    <h4>A propos</h4>
+                    <p style="margin-bottom: 0.8rem;"><strong>Qui suis-je ?</strong></p>
+                    <p>Passionnée par la tech et le design, j'ai 18 ans et je cherche une alternance pour la rentrée. Bienvenue dans mon espace de partage !</p>
+                    <a href="#" class="btn-cv">Télécharger mon cv</a>
                 </div>
 
-                <div class="card">
-                    <h4>Ma Tech Stack</h4>
-                    <ul class="stack-list">
-                        <li>JavaScript / TypeScript</li>
-                        <li>React / Next.js</li>
-                        <li>Node.js / Express</li>
-                        <li>Git & GitHub</li>
-                        <li>SQL / PostgreSQL</li>
-                    </ul>
+                <div class="section-aside">
+                    <h4>Mes futurs projets</h4>
+                    <div class="project-item">✦ Application mobile de révision (React Native)</div>
+                    <div class="project-item">✦ Refonte esthétique de mes outils de cours</div>
                 </div>
             </aside>
         </main>
