@@ -7,15 +7,14 @@
     <!-- Une police super fine, élégante et moderne -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Palette Coquette / Minimalist Beige & Rose */
+            /* Palette Minimalist Beige & Rose */
             --bg: #faf6f0;          /* Fond crème/beige très doux */
-            --text-main: #2d2a29;   /* Texte foncé doux (pas de noir pur agressif) */
+            --text-main: #2d2a29;   /* Texte foncé doux */
             --text-muted: #7c7571;  /* Texte secondaire atténué */
             --accent-rose: #f3d5d8; /* Rose poudré délicat */
-            --rose-hover: #e8be0e;
         }
 
         * {
@@ -29,7 +28,7 @@
             color: var(--text-main);
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-weight: 400;
-            line-height: 1.7;
+            line-height: 1.8;
             padding: 4rem 2rem;
         }
 
@@ -38,7 +37,7 @@
             margin: 0 auto;
         }
 
-        /* HEADER (Exactement comme ta maquette) */
+        /* HEADER */
         header {
             margin-bottom: 5rem;
         }
@@ -63,12 +62,10 @@
             margin-left: 1.5rem;
             font-weight: 400;
             transition: color 0.2s;
-            border-bottom: 1px transparent;
         }
 
         .nav-links a:hover {
             color: #b8878f;
-            border-bottom: 1px solid #b8878f;
         }
 
         header .subtitle {
@@ -77,7 +74,7 @@
             font-weight: 400;
         }
 
-        /* DISPOSITION DE LA MAQUETTE EN 2 COLONNES */
+        /* LAYOUT 2 COLONNES */
         main {
             display: grid;
             grid-template-columns: 1.8fr 1fr;
@@ -92,40 +89,75 @@
             }
         }
 
-        /* COLONNE GAUCHE : MON QUOTIDIEN */
+        /* COLONNE GAUCHE : LES ARTICLES */
         .column-title {
             font-size: 1.3rem;
             font-weight: 500;
             margin-bottom: 2.5rem;
             color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         article {
-            margin-bottom: 3.5rem;
+            margin-bottom: 4rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px dashed #e5ded6;
+        }
+
+        article:last-of-type {
+            border-bottom: none;
         }
 
         article .date {
             font-size: 0.85rem;
             color: var(--text-muted);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
 
         article h3 {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             font-weight: 500;
+            margin-bottom: 1.2rem;
+            color: var(--text-main);
+            line-height: 1.4;
+        }
+
+        .article-content {
+            font-size: 1.05rem;
+            color: #4a4542;
+            font-weight: 300;
+        }
+
+        .article-content p {
+            margin-bottom: 1.2rem;
+        }
+
+        .article-content h4 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-top: 1.8rem;
             margin-bottom: 0.6rem;
             color: var(--text-main);
         }
 
-        article p {
-            font-size: 1rem;
-            color: var(--text-muted);
-            font-weight: 300;
+        /* Style pour les petits blocs de code ou technos */
+        .code-inline {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #f1eae1;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.95rem;
         }
 
         /* COLONNE DROITE : A PROPOS */
+        aside {
+            position: sticky;
+            top: 2rem;
+        }
+
         aside .section-aside {
             margin-bottom: 3.5rem;
         }
@@ -151,16 +183,14 @@
             background: var(--accent-rose);
             padding: 0.5rem 1.2rem;
             border-radius: 20px;
-            margin-top: 0.5rem;
-            transition: background 0.2s, transform 0.1s;
+            margin-top: 0.8rem;
+            transition: background 0.2s;
         }
 
         .btn-cv:hover {
             background: #ebd0d3;
-            transform: translateY(-1px);
         }
 
-        /* PETITS TAGS PROJETS */
         .project-item {
             font-size: 1rem;
             color: var(--text-muted);
@@ -175,11 +205,11 @@
         <!-- EN-TÊTE -->
         <header>
             <div class="header-top">
-                <h1>Le blog de Yasmine</h1>
+                <h1>Le monde de Yasmine</h1>
                 <div class="nav-links">
                     <a href="https://github.com/ylamanti" target="_blank">github</a>
                     <a href="https://linkedin.com/in/ylamanti" target="_blank">linkedin</a>
-                    <a href="#" target="_blank">portfolio</a>
+                    <a href="https://github.com/ylamanti" target="_blank">portfolio</a>
                 </div>
             </div>
             <p class="subtitle">Etudiante en prépa intégrée en école d’ingénieur en informatique</p>
@@ -187,22 +217,68 @@
 
         <!-- GRILLE PRINCIPALE -->
         <main>
-            <!-- COLONNE GAUCHE -->
+            <!-- COLONNE GAUCHE (Articles axés Algo / Scripting / GitHub) -->
             <section>
                 <h2 class="column-title">Mon quotidien</h2>
 
                 <!-- Article 1 -->
                 <article>
                     <div class="date">15 Juin 2026</div>
-                    <h3>Comment j'organise mes projets de prépa sans paniquer</h3>
-                    <p>Entre les maths, la physique et les projets de dev, j'ai dû trouver une méthode d'organisation carrée. Je vous partage mes outils favoris et mes galères.</p>
+                    <h3>Défi GitHub : Automatiser le tri de mes fichiers de cours en Python</h3>
+                    <div class="article-content">
+                        <p>Avec le rythme de la prépa, mon dossier "Téléchargements" est rapidement devenu un chaos sans nom entre les PDF de maths, les énoncés de physique et les scripts de TP. Au lieu de tout ranger à la main, j'ai décidé de créer un script d'automatisation en Python.</p>
+                        <p>Le principe du script est de surveiller un dossier spécifique, d'analyser l'extension de chaque nouveau fichier (comme <span class="code-inline">.pdf</span>, <span class="code-inline">.py</span>, <span class="code-inline">.docx</span>) et de les déplacer instantanément dans des sous-dossiers correspondants et datés.</p>
+                        
+                        <h4>Ce que ce défi m'a appris</h4>
+                        <p>J'ai dû explorer la bibliothèque système <span class="code-inline">os</span> et le module <span class="code-inline">shutil</span> de Python. Gérer les cas particuliers, comme deux fichiers qui portent exactement le même nom sans écraser le premier, était un super exercice de logique pure.</p>
+                    </div>
                 </article>
 
                 <!-- Article 2 -->
                 <article>
                     <div class="date">02 Juin 2026</div>
-                    <h3>Mon premier algorithme de tri en Python</h3>
-                    <p>Retour sur le TP de la semaine dernière où on a dû recréer un tri à bulles. Explication simple de comment ça marche derrière l'écran.</p>
+                    <h3>Résolution de problème : Optimiser un algorithme de recherche</h3>
+                    <div class="article-content">
+                        <p>Cette semaine, je me suis attaquée à un défi d'algorithmie classique sur GitHub qui consistait à trouver le chemin le plus court dans un labyrinthe représenté sous forme de matrice (un graphe).</p>
+                        <p>Ma première tentative utilisait une approche naïve en force brute, mais la complexité algorithmique faisait ramer le programme dès que la taille de la matrice dépassait 50x50.</p>
+                        
+                        <h4>Le passage à l'optimisation</h4>
+                        <p>Pour résoudre ce problème d'efficacité, j'ai implémenté un algorithme de parcours en largeur (BFS) en utilisant une structure de file (<span class="code-inline">queue</span>). Cela a permis de réduire drastiquement le nombre de chemins explorés inutilement.</p>
+                        <p>C'est ce genre de challenge d'optimisation de code et de gestion de la mémoire qui me passionne le plus dans mes cours d'informatique.</p>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article>
+                    <div class="date">22 Mai 2026</div>
+                    <h3>Dompter le langage C : Ma bataille avec les pointeurs et la mémoire</h3>
+                    <div class="article-content">
+                        <p>Pour notre projet d'architecture système, on a dû abandonner le confort de Python pour coder en langage <span class="code-inline">C</span>. L'objectif : allouer manuellement de la mémoire pour gérer une liste chaînée de données.</p>
+                        <p>Au début, mon terminal n'affichait qu'une seule chose en boucle : la fameuse erreur <span class="code-inline">Segmentation Fault</span>, signe qu'un de mes pointeurs essayait d'accéder à une zone mémoire interdite.</p>
+                        
+                        <h4>Comprendre ce qu'il se passe sous le capot</h4>
+                        <p>En utilisant un outil de débogage nommé <span class="code-inline">Valgrind</span>, j'ai enfin pu tracer mes allocations de mémoire (<span class="code-inline">malloc</span>) et m'assurer que chaque octet ouvert était bien refermé avec un <span class="code-inline">free</span>. C'est difficile, mais super formateur pour comprendre comment un ordinateur fonctionne réellement.</p>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article>
+                    <div class="date">10 Mai 2026</div>
+                    <h3>Un script pour analyser mes propres notes de prépa avec Pandas</h3>
+                    <div class="article-content">
+                        <p>Pour lier l'utile à l'agréable, j'ai exporté toutes mes notes de l'année au format CSV et j'ai écrit un script en Python utilisant la bibliothèque de Data Science <span class="code-inline">Pandas</span> pour en faire une analyse statistique complète.</p>
+                        <p>Mon script calcule mes moyennes pondérées par coefficient, extrait mes écarts-types par matière, et génère des prévisions sur les notes minimales à obtenir aux prochains partiels pour valider mon semestre avec mention.</p>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article>
+                    <div class="date">18 Avril 2026</div>
+                    <h3>Défi Cryptographie : Décoder un message chiffré (Algo de César avancé)</h3>
+                    <div class="article-content">
+                        <p>J'ai participé à un mini-défi de sécurité informatique lancé sur un dépôt GitHub étudiant. Le but était de casser un message secret sans avoir la clé de chiffrement, en utilisant la méthode de l'analyse de fréquence des lettres.</p>
+                        <p>Comme la lettre "E" est la plus fréquente en français, j'ai codé un programme qui compte les occurrences de chaque caractère dans le texte crypté pour deviner automatiquement le décalage de l'alphabet utilisé.</p>
+                    </div>
                 </article>
             </section>
 
@@ -211,14 +287,15 @@
                 <div class="section-aside">
                     <h4>A propos</h4>
                     <p style="margin-bottom: 0.8rem;"><strong>Qui suis-je ?</strong></p>
-                    <p>Passionnée par la tech et le design, j'ai 18 ans et je cherche une alternance pour la rentrée. Bienvenue dans mon espace de partage !</p>
+                    <p>Passionnée par la logique, les mathématiques et la résolution de problèmes, j'ai 18 ans et je cherche une alternance pour la rentrée. Bienvenue dans mon espace !</p>
                     <a href="#" class="btn-cv">Télécharger mon cv</a>
                 </div>
 
                 <div class="section-aside">
-                    <h4>Mes futurs projets</h4>
-                    <div class="project-item">✦ Application mobile de révision (React Native)</div>
-                    <div class="project-item">✦ Refonte esthétique de mes outils de cours</div>
+                    <h4>Mes futurs défis</h4>
+                    <div class="project-item">✦ Script d'analyse de données (Pandas/NumPy)</div>
+                    <div class="project-item">✦ Résolution de challenges d'algorithmie</div>
+                    <div class="project-item">✦ Script réseau d'écoute de ports en Python</div>
                 </div>
             </aside>
         </main>
