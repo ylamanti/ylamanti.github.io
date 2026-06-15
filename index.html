@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ylamanti.dev // Blog </title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --neon-green: #7ee787;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* HEADER & PROFIL */
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .profile h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .profile p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-top: 0.2rem;
+        }
+
+        .badge-recherche {
+            display: inline-block;
+            background: rgba(126, 231, 135, 0.1);
+            color: var(--neon-green);
+            border: 1px solid rgba(126, 231, 135, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* SECTION LAYOUT */
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ARTICLES DE BLOG */
+        .section-title {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        article {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        article:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+
+        .meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            font-family: monospace;
+        }
+
+        article h3 {
+            color: #ffffff;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        article p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            background: rgba(88, 166, 255, 0.1);
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-family: monospace;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+        }
+
+        /* SIDEBAR (STACK & BIO) */
+        aside .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        aside h4 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .stack-list {
+            list-style: none;
+        }
+
+        .stack-list li {
+            font-family: monospace;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stack-list li::before {
+            content: ">";
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .btn-cv {
+            display: block;
+            width: 100%;
+            background: var(--accent);
+            color: #ffffff;
+            text-align: center;
+            padding: 0.75rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: opacity 0.2s;
+        }
+
+        .btn-cv:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- EN-TÊTE DU SITE -->
+        <header>
+            <div class="profile">
+                <h1>ylamanti .dev</h1>
+                <p>Étudiante en Informatique </p>
+                <div class="badge-recherche">⚡ Cherche Alternance (Sept. 2026)</div>
+            </div>
+            <div class="links">
+                <a href="https://github.com/ylamanti" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/ylamanti" target="_blank">LinkedIn</a>
+            </div>
+        </header>
+
+        <!-- CONTENU PRINCIPAL -->
+        <main>
+            <!-- COLONNE BLOG -->
+            <section>
+                <h2 class="section-title">Mon Dev Log</h2>
+
+                <!-- Article 1 -->
+                <article>
+                    <div class="meta">15 Juin 2026 • 3 min read</div>
+                    <h3>Comment j'ai crashé mon premier script Node.js (et ce que j'ai appris)</h3>
+                    <p>Récit d'une boucle infinie mémorable qui a fait souffler le processeur de mon PC, et comment j'ai enfin compris l'importance des conditions d'arrêt en JS.</p>
+                    <div>
+                        <span class="tech-tag">#javascript</span>
+                        <span class="tech-tag">#nodejs</span>
+                        <span class="tech-tag">#debug</span>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article>
+                    <div class="meta">02 Juin 2026 • 5 min read</div>
+                    <h3>Pourquoi j'ai choisi de coder ce blog sans CMS</h3>
+                    <p>Pour prouver mes compétences aux recruteurs, j'ai décidé de bannir WordPress et d'écrire mon propre code. Voici ma structure HTML/CSS minimaliste.</p>
+                    <div>
+                        <span class="tech-tag">#html</span>
+                        <span class="tech-tag">#css</span>
+                        <span class="tech-tag">#architecture</span>
+                    </div>
+                </article>
+            </section>
+
+            <!-- COLONNE INFOS / STACK -->
+            <aside>
+                <h2 class="section-title">À propos</h2>
+                
+                <div class="card">
+                    <h4>Moi en bref</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">
+                        J'ai 18 ans, passionnée d'info, et je documente mon parcours de junior pour montrer ce que j'ai dans le ventre.
+                    </p>
+                    <a href="#" class="btn-cv">📄 Télécharger mon CV</a>
+                </div>
+
+                <div class="card">
+                    <h4>Ma Tech Stack</h4>
+                    <ul class="stack-list">
+                        <li>JavaScript / TypeScript</li>
+                        <li>React / Next.js</li>
+                        <li>Node.js / Express</li>
+                        <li>Git & GitHub</li>
+                        <li>SQL / PostgreSQL</li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+</body>
+</html>
