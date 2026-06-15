@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le blog de Yasmine</title>
+    <title>L'Univers de Yasmine</title>
     <!-- Une police super fine, élégante et moderne -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -205,7 +205,7 @@
         <!-- EN-TÊTE -->
         <header>
             <div class="header-top">
-                <h1>Le monde de Yasmine</h1>
+                <h1>Le blog de Yasmine</h1>
                 <div class="nav-links">
                     <a href="https://github.com/ylamanti" target="_blank">github</a>
                     <a href="https://linkedin.com/in/ylamanti" target="_blank">linkedin</a>
@@ -217,67 +217,67 @@
 
         <!-- GRILLE PRINCIPALE -->
         <main>
-            <!-- COLONNE GAUCHE (Articles axés Algo / Scripting / GitHub) -->
+            <!-- COLONNE GAUCHE (Articles adaptés à tes connaissances réelles) -->
             <section>
-                <h2 class="column-title">Mon quotidien</h2>
+                <h2 class="column-title">Mon quotidien de code</h2>
 
                 <!-- Article 1 -->
                 <article>
                     <div class="date">15 Juin 2026</div>
-                    <h3>Défi GitHub : Automatiser le tri de mes fichiers de cours en Python</h3>
+                    <h3>Mon premier malloc en C : Comprendre enfin la taille des tableaux</h3>
                     <div class="article-content">
-                        <p>Avec le rythme de la prépa, mon dossier "Téléchargements" est rapidement devenu un chaos sans nom entre les PDF de maths, les énoncés de physique et les scripts de TP. Au lieu de tout ranger à la main, j'ai décidé de créer un script d'automatisation en Python.</p>
-                        <p>Le principe du script est de surveiller un dossier spécifique, d'analyser l'extension de chaque nouveau fichier (comme <span class="code-inline">.pdf</span>, <span class="code-inline">.py</span>, <span class="code-inline">.docx</span>) et de les déplacer instantanément dans des sous-dossiers correspondants et datés.</p>
-                        
-                        <h4>Ce que ce défi m'a appris</h4>
-                        <p>J'ai dû explorer la bibliothèque système <span class="code-inline">os</span> et le module <span class="code-inline">shutil</span> de Python. Gérer les cas particuliers, comme deux fichiers qui portent exactement le même nom sans écraser le premier, était un super exercice de logique pure.</p>
+                        <p>En cours de langage C, j'étais habituée à déclarer mes tableaux avec une taille fixe (comme <span class="code-inline">int tab[100];</span>). Mais cette semaine, on a vu comment créer des tableaux dont la taille est décidée par l'utilisateur pendant que le programme tourne.</p>
+                        <p>J'ai utilisé la fonction <span class="code-inline">malloc</span> combinée avec <span class="code-inline">sizeof(int)</span> pour réserver exactement l'espace nécessaire en mémoire vive. C'est un peu déstabilisant au début car on manipule directement des adresses (des pointeurs), mais c'est hyper logique.</p>
                     </div>
                 </article>
 
                 <!-- Article 2 -->
                 <article>
-                    <div class="date">02 Juin 2026</div>
-                    <h3>Résolution de problème : Optimiser un algorithme de recherche</h3>
+                    <div class="date">08 Juin 2026</div>
+                    <h3>Script Python : Automatiser le calcul de mes moyennes de cours</h3>
                     <div class="article-content">
-                        <p>Cette semaine, je me suis attaquée à un défi d'algorithmie classique sur GitHub qui consistait à trouver le chemin le plus court dans un labyrinthe représenté sous forme de matrice (un graphe).</p>
-                        <p>Ma première tentative utilisait une approche naïve en force brute, mais la complexité algorithmique faisait ramer le programme dès que la taille de la matrice dépassait 50x50.</p>
-                        
-                        <h4>Le passage à l'optimisation</h4>
-                        <p>Pour résoudre ce problème d'efficacité, j'ai implémenté un algorithme de parcours en largeur (BFS) en utilisant une structure de file (<span class="code-inline">queue</span>). Cela a permis de réduire drastiquement le nombre de chemins explorés inutilement.</p>
-                        <p>C'est ce genre de challenge d'optimisation de code et de gestion de la mémoire qui me passionne le plus dans mes cours d'informatique.</p>
+                        <p>Pour m'éviter de tout taper sur une calculatrice à chaque fin de module, j'ai écrit un petit script Python tout simple. Il me demande mes notes et les coefficients un par un dans le terminal grâce à des boucles <span class="code-inline">while</span>, puis calcule la moyenne exacte.</p>
+                        <p>J'ai utilisé des listes pour stocker les données et des structures conditionnelles <span class="code-inline">if/elif/else</span> pour afficher une appréciation personnalisée ("Super !", "A bosser", etc.) selon le résultat final.</p>
                     </div>
                 </article>
 
                 <!-- Article 3 -->
                 <article>
-                    <div class="date">22 Mai 2026</div>
-                    <h3>Dompter le langage C : Ma bataille avec les pointeurs et la mémoire</h3>
+                    <div class="date">28 Mai 2026</div>
+                    <h3>La règle d'or en langage C : Ne jamais oublier le free()</h3>
                     <div class="article-content">
-                        <p>Pour notre projet d'architecture système, on a dû abandonner le confort de Python pour coder en langage <span class="code-inline">C</span>. L'objectif : allouer manuellement de la mémoire pour gérer une liste chaînée de données.</p>
-                        <p>Au début, mon terminal n'affichait qu'une seule chose en boucle : la fameuse erreur <span class="code-inline">Segmentation Fault</span>, signe qu'un de mes pointeurs essayait d'accéder à une zone mémoire interdite.</p>
-                        
-                        <h4>Comprendre ce qu'il se passe sous le capot</h4>
-                        <p>En utilisant un outil de débogage nommé <span class="code-inline">Valgrind</span>, j'ai enfin pu tracer mes allocations de mémoire (<span class="code-inline">malloc</span>) et m'assurer que chaque octet ouvert était bien refermé avec un <span class="code-inline">free</span>. C'est difficile, mais super formateur pour comprendre comment un ordinateur fonctionne réellement.</p>
+                        <p>En manipulant l'allocation dynamique de mémoire en C, j'ai vite compris qu'on devenait totalement responsable de la gestion de la RAM de l'ordinateur. Contrairement à Python qui nettoie tout tout seul, le C nous oblige à être hyper rigoureux.</p>
+                        <p>Chaque fois que j'ouvre un espace avec <span class="code-inline">malloc</span> ou <span class="code-inline">calloc</span>, je prends maintenant le réflexe d'écrire immédiatement la fonction <span class="code-inline">free()</span> à la fin de mon bloc de code pour éviter les fuites de mémoire (memory leaks).</p>
                     </div>
                 </article>
 
                 <!-- Article 4 -->
                 <article>
-                    <div class="date">10 Mai 2026</div>
-                    <h3>Un script pour analyser mes propres notes de prépa avec Pandas</h3>
+                    <div class="date">15 Mai 2026</div>
+                    <h3>Défi GitHub : Recréer un mini-jeu du Juste Prix en Python</h3>
                     <div class="article-content">
-                        <p>Pour lier l'utile à l'agréable, j'ai exporté toutes mes notes de l'année au format CSV et j'ai écrit un script en Python utilisant la bibliothèque de Data Science <span class="code-inline">Pandas</span> pour en faire une analyse statistique complète.</p>
-                        <p>Mon script calcule mes moyennes pondérées par coefficient, extrait mes écarts-types par matière, et génère des prévisions sur les notes minimales à obtenir aux prochains partiels pour valider mon semestre avec mention.</p>
+                        <p>Pour m'entraîner à utiliser le module <span class="code-inline">random</span> en Python, j'ai partagé un petit projet classique sur mon profil GitHub : le jeu du Juste Prix (Devine le nombre entre 1 et 100).</p>
+                        <p>Le script génère un nombre mystère, et l'utilisateur a 10 essais pour le trouver. Le programme le guide en répondant "C'est plus !" ou "C'est moins !". C'est un excellent exercice pour bien maîtriser la logique des compteurs et des boucles de jeu.</p>
                     </div>
                 </article>
 
                 <!-- Article 5 -->
                 <article>
-                    <div class="date">18 Avril 2026</div>
-                    <h3>Défi Cryptographie : Décoder un message chiffré (Algo de César avancé)</h3>
+                    <div class="date">02 Mai 2026</div>
+                    <h3>Agrandir un tableau en cours de route avec realloc</h3>
                     <div class="article-content">
-                        <p>J'ai participé à un mini-défi de sécurité informatique lancé sur un dépôt GitHub étudiant. Le but était de casser un message secret sans avoir la clé de chiffrement, en utilisant la méthode de l'analyse de fréquence des lettres.</p>
-                        <p>Comme la lettre "E" est la plus fréquente en français, j'ai codé un programme qui compte les occurrences de chaque caractère dans le texte crypté pour deviner automatiquement le décalage de l'alphabet utilisé.</p>
+                        <p>Aujourd'hui en TP de C, on a fait face à un problème : que faire si notre tableau dynamique créé avec <span class="code-inline">malloc</span> devient trop petit pour stocker de nouvelles valeurs entrées par l'utilisateur ?</p>
+                        <p>C'est là que j'ai découvert la fonction <span class="code-inline">realloc</span>. Elle permet de redimensionner un bloc de mémoire déjà alloué sans perdre les données qui étaient déjà stockées dedans. C'est magique et super efficace.</p>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article>
+                    <div class="date">20 Avril 2026</div>
+                    <h3>Manipulation de fichiers texte avec Python</h3>
+                    <div class="article-content">
+                        <p>Pour mon tout premier défi GitHub de l'année, j'ai appris à ouvrir, lire et modifier un fichier <span class="code-inline">.txt</span> externe directement depuis un script Python grâce à l'instruction <span class="code-inline">with open()</span>.</p>
+                        <p>Le script parcourt un fichier texte brut, compte automatiquement le nombre de lignes et de mots, et écrit le bilan dans un nouveau fichier de rapport. C'est très basique, mais ça montre le pouvoir de l'informatique pour traiter des données textuelles rapidement.</p>
                     </div>
                 </article>
             </section>
@@ -287,15 +287,15 @@
                 <div class="section-aside">
                     <h4>A propos</h4>
                     <p style="margin-bottom: 0.8rem;"><strong>Qui suis-je ?</strong></p>
-                    <p>Passionnée par la logique, les mathématiques et la résolution de problèmes, j'ai 18 ans et je cherche une alternance pour la rentrée. Bienvenue dans mon espace !</p>
+                    <p>Passionnée par la logique et l'apprentissage du code, j'ai 18 ans. Bienvenue dans mon espace !</p>
                     <a href="#" class="btn-cv">Télécharger mon cv</a>
                 </div>
 
                 <div class="section-aside">
-                    <h4>Mes futurs défis</h4>
-                    <div class="project-item">✦ Script d'analyse de données (Pandas/NumPy)</div>
-                    <div class="project-item">✦ Résolution de challenges d'algorithmie</div>
-                    <div class="project-item">✦ Script réseau d'écoute de ports en Python</div>
+                    <h4>Mes langages maitrisés</h4>
+                    <div class="project-item">✦ Python (Bases, Boucles, Listes)</div>
+                    <div class="project-item">✦ Langage C (Pointeurs, Alloc. Dynamique)</div>
+                    <div class="project-item">✦ Git / GitHub (Gestion de version)</div>
                 </div>
             </aside>
         </main>
