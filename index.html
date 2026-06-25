@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L'Univers de Yasmine</title>
+
     <!-- Une police super fine, élégante et moderne -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            /* Palette Minimalist Beige & Rose */
-            --bg: #faf6f0;          /* Fond crème/beige très doux */
-            --text-main: #2d2a29;   /* Texte foncé doux */
-            --text-muted: #7c7571;  /* Texte secondaire atténué */
-            --accent-rose: #f3d5d8; /* Rose poudré délicat */
+            --bg: #faf6f0;
+            --text-main: #2d2a29;
+            --text-muted: #7c7571;
+            --accent-rose: #f3d5d8;
         }
 
         * {
@@ -37,7 +39,6 @@
             margin: 0 auto;
         }
 
-        /* HEADER */
         header {
             margin-bottom: 5rem;
         }
@@ -74,7 +75,6 @@
             font-weight: 400;
         }
 
-        /* LAYOUT 2 COLONNES */
         main {
             display: grid;
             grid-template-columns: 1.8fr 1fr;
@@ -89,7 +89,6 @@
             }
         }
 
-        /* COLONNE GAUCHE : LES ARTICLES */
         .column-title {
             font-size: 1.3rem;
             font-weight: 500;
@@ -143,7 +142,6 @@
             color: var(--text-main);
         }
 
-        /* Style pour les petits blocs de code ou technos */
         .code-inline {
             font-family: 'JetBrains Mono', monospace;
             background-color: #f1eae1;
@@ -152,7 +150,6 @@
             font-size: 0.95rem;
         }
 
-        /* COLONNE DROITE : A PROPOS */
         aside {
             position: sticky;
             top: 2rem;
@@ -199,10 +196,11 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
-        <!-- EN-TÊTE -->
+
         <header>
             <div class="header-top">
                 <h1>L'Univers de Yasmine</h1>
@@ -215,123 +213,169 @@
             <p class="subtitle">Etudiante en prépa intégrée en école d’ingénieur en informatique</p>
         </header>
 
-        <!-- GRILLE PRINCIPALE -->
         <main>
-            <!-- COLONNE GAUCHE (Articles adaptés à tes connaissances réelles) -->
+
+            <!-- COLONNE GAUCHE -->
             <section>
                 <h2 class="column-title">Mon quotidien</h2>
+
+                <!-- ARTICLES TRIÉS DU PLUS RÉCENT AU PLUS ANCIEN -->
+
+                <!-- Bénévolat MLC -->
+                <article>
+                    <div class="date">Octobre 2025 – Aujourd’hui</div>
+                    <h3>Bénévolat à la Maison des Loisirs : Organisation, accueil et gestion d’activités</h3>
+                    <div class="article-content">
+                        <p>Depuis octobre 2025, je suis bénévole à la Maison des Loisirs et de la Culture de Montigny. Cet engagement me permet de contribuer à la vie locale tout en développant des compétences humaines essentielles.</p>
+                        <p>J’aide à l’organisation d’activités culturelles, j’accueille les participants et je soutiens l’équipe d’animation dans la mise en place d’événements.</p>
+                    </div>
+                </article>
 
                 <!-- Article 1 -->
                 <article>
                     <div class="date">15 Juin 2026</div>
                     <h3>Utiliser malloc en C : Comprendre enfin la taille des tableaux</h3>
                     <div class="article-content">
-                        <p>En cours de langage C, j'étais habituée à déclarer mes tableaux avec une taille fixe (comme <span class="code-inline">int tab[100];</span>). Mais cette semaine, on a vu comment créer des tableaux dont la taille est décidée par l'utilisateur pendant que le programme tourne.</p>
-                        <p>J'ai utilisé la fonction <span class="code-inline">malloc</span> combinée avec <span class="code-inline">sizeof(int)</span> pour réserver exactement l'espace nécessaire en mémoire vive. C'est un peu déstabilisant au début car on manipule directement des adresses (des pointeurs), mais c'est hyper logique.</p>
+                        <p>En cours de langage C, j'étais habituée à déclarer mes tableaux avec une taille fixe. Cette semaine, on a vu comment créer des tableaux dont la taille est décidée par l'utilisateur.</p>
                     </div>
                 </article>
 
-                <!-- Article 2 -->
-                <article>
-                    <div class="date">08 Juin 2026</div>
-                    <h3>Script Python : Automatiser le calcul de mes moyennes de cours</h3>
-                    <div class="article-content">
-                        <p>Pour m'éviter de tout taper sur une calculatrice à chaque fin de module, j'ai écrit un petit script Python tout simple. Il me demande mes notes et les coefficients un par un dans le terminal grâce à des boucles <span class="code-inline">while</span>, puis calcule la moyenne exacte.</p>
-                        <p>J'ai utilisé des listes pour stocker les données et des structures conditionnelles <span class="code-inline">if/elif/else</span> pour afficher une appréciation personnalisée ("Super !", "A bosser", etc.) selon le résultat final.</p>
-                    </div>
-                </article>
-
-                <!-- Article 3 -->
-                <article>
-                    <div class="date">28 Mai 2026</div>
-                    <h3>La règle d'or en langage C : Ne jamais oublier le free()</h3>
-                    <div class="article-content">
-                        <p>En manipulant l'allocation dynamique de mémoire en C, j'ai vite compris qu'on devenait totalement responsable de la gestion de la RAM de l'ordinateur. Contrairement à Python qui nettoie tout tout seul, le C nous oblige à être hyper rigoureux.</p>
-                        <p>Chaque fois que j'ouvre un espace avec <span class="code-inline">malloc</span> ou <span class="code-inline">calloc</span>, je prends maintenant le réflexe d'écrire immédiatement la fonction <span class="code-inline">free()</span> à la fin de mon bloc de code pour éviter les fuites de mémoire (memory leaks).</p>
-                    </div>
-                </article>
-
-                <!-- Article 4 -->
-                <article>
-                    <div class="date">15 Mai 2026</div>
-                    <h3>Défi GitHub : Recréer un mini-jeu du Juste Prix en Python</h3>
-                    <div class="article-content">
-                        <p>Pour m'entraîner à utiliser le module <span class="code-inline">random</span> en Python, j'ai partagé un petit projet classique sur mon profil GitHub : le jeu du Juste Prix (Devine le nombre entre 1 et 100).</p>
-                        <p>Le script génère un nombre mystère, et l'utilisateur a 10 essais pour le trouver. Le programme le guide en répondant "C'est plus !" ou "C'est moins !". C'est un excellent exercice pour bien maîtriser la logique des compteurs et des boucles de jeu.</p>
-                    </div>
-                </article>
-
-                <!-- Article 5 -->
-                <article>
-                    <div class="date">02 Mai 2026</div>
-                    <h3>Agrandir un tableau en cours de route avec realloc</h3>
-                    <div class="article-content">
-                        <p>Aujourd'hui en cours de C, on a fait face à un problème : que faire si notre tableau dynamique créé avec <span class="code-inline">malloc</span> devient trop petit pour stocker de nouvelles valeurs entrées par l'utilisateur ?</p>
-                        <p>C'est là que j'ai découvert la fonction <span class="code-inline">realloc</span>. Elle permet de redimensionner un bloc de mémoire déjà alloué sans perdre les données qui étaient déjà stockées dedans. C'est magique et super efficace.</p>
-                    </div>
-                </article>
-
-                <!-- Article 6 -->
-                <article>
-                    <div class="date">20 Avril 2026</div>
-                    <h3>Manipulation de fichiers texte avec Python</h3>
-                    <div class="article-content">
-                        <p>Pour mon tout premier défi GitHub de l'année, j'ai appris à ouvrir, lire et modifier un fichier <span class="code-inline">.txt</span> externe directement depuis un script Python grâce à l'instruction <span class="code-inline">with open()</span>.</p>
-                        <p>Le script parcourt un fichier texte brut, compte automatiquement le nombre de lignes et de mots, et écrit le bilan dans un nouveau fichier de rapport. C'est très basique, mais ça montre le pouvoir de l'informatique pour traiter des données textuelles rapidement.</p>
-                    </div>
-                </article>
-
+                <!-- GitHub Pages -->
                 <article>
                     <div class="date">08 Juin 2026</div>
                     <h3>Créer et publier mon blog avec GitHub Pages</h3>
                     <div class="article-content">
-                        <p>Pour rendre mon site accessible à tous, j'ai choisi de l'héberger avec <span class="code-inline">GitHub Pages</span>. J'ai commencé par créer un dépôt GitHub contenant tous les fichiers de mon site, puis j'ai activé GitHub Pages afin d'obtenir une adresse web gratuite.</p>
-
-                        <p>J'ai ensuite ajouté progressivement les différentes pages de mon blog, personnalisé le style en HTML et CSS, puis appris à mettre à jour le site grâce aux <span class="code-inline">commits</span> et aux <span class="code-inline">push</span>. Chaque modification est automatiquement publiée quelques instants plus tard.</p>
-
-                        <p>Enfin, j'ai ajouté ma note de synthèse et mon CV au dépôt GitHub afin qu'elle soit accessible depuis un simple bouton sur mon site. Cette expérience m'a permis de mieux comprendre le fonctionnement de GitHub et du déploiement d'un site web statique.</p>
+                        <p>Pour rendre mon site accessible à tous, j'ai choisi de l'héberger avec GitHub Pages. J’ai appris à gérer un dépôt, personnaliser mon site et publier automatiquement mes mises à jour.</p>
                     </div>
                 </article>
-            </section>
 
-           
+                <!-- Script Python -->
+                <article>
+                    <div class="date">08 Juin 2026</div>
+                    <h3>Script Python : Automatiser le calcul de mes moyennes</h3>
+                    <div class="article-content">
+                        <p>J’ai créé un script Python qui calcule automatiquement mes moyennes en fonction des coefficients. Un gain de temps énorme.</p>
+                    </div>
+                </article>
+
+                <!-- Musée interactif -->
+                <article>
+                    <div class="date">Septembre 2024 – Juin 2025</div>
+                    <h3>Créer un musée interactif avec Python et Tkinter</h3>
+                    <div class="article-content">
+                        <p>J’ai développé un musée interactif avec Python et Tkinter, comprenant une interface visiteur et une interface administrateur.</p>
+                    </div>
+                </article>
+
+                <!-- free() -->
+                <article>
+                    <div class="date">28 Mai 2026</div>
+                    <h3>La règle d'or en langage C : Ne jamais oublier free()</h3>
+                    <div class="article-content">
+                        <p>En C, on doit gérer la mémoire soi-même. J’ai appris à utiliser systématiquement free() pour éviter les fuites.</p>
+                    </div>
+                </article>
+
+                <!-- Juste Prix -->
+                <article>
+                    <div class="date">15 Mai 2026</div>
+                    <h3>Défi GitHub : Recréer un mini‑jeu du Juste Prix</h3>
+                    <div class="article-content">
+                        <p>J’ai recréé le jeu du Juste Prix en Python pour m’entraîner à utiliser le module random.</p>
+                    </div>
+                </article>
+
+                <!-- realloc -->
+                <article>
+                    <div class="date">02 Mai 2026</div>
+                    <h3>Agrandir un tableau en cours de route avec realloc</h3>
+                    <div class="article-content">
+                        <p>J’ai découvert comment redimensionner un tableau dynamique grâce à realloc, sans perdre les données existantes.</p>
+                    </div>
+                </article>
+
+                <!-- Fichiers Python -->
+                <article>
+                    <div class="date">20 Avril 2026</div>
+                    <h3>Manipulation de fichiers texte avec Python</h3>
+                    <div class="article-content">
+                        <p>J’ai appris à ouvrir, lire et écrire dans des fichiers texte grâce à l’instruction with open().</p>
+                    </div>
+                </article>
+
+                <!-- Soutien scolaire -->
+                <article>
+                    <div class="date">Juin 2024</div>
+                    <h3>Soutien scolaire : Aider, expliquer et transmettre</h3>
+                    <div class="article-content">
+                        <p>J’ai accompagné des élèves dans leurs devoirs chez Study Star, en adaptant mes explications à leur niveau.</p>
+                    </div>
+                </article>
+
+                <!-- Tutorat -->
+                <article>
+                    <div class="date">Septembre 2023 – Juin 2024</div>
+                    <h3>Tutorat en mathématiques : Un engagement entre élèves</h3>
+                    <div class="article-content">
+                        <p>J’ai participé à un projet de tutorat au lycée Jean Monnet, aidant des camarades en mathématiques.</p>
+                    </div>
+                </article>
+
+                <!-- FFM -->
+                <article>
+                    <div class="date">Juillet 2021 – Novembre 2022</div>
+                    <h3>Créer du contenu pour la Fédération Française de la Musique</h3>
+                    <div class="article-content">
+                        <p>J’ai créé des contenus ludiques publiés dans le journal Groove Gazette, destiné aux établissements pénitentiaires.</p>
+                    </div>
+                </article>
+
+                <!-- Stage 3e -->
+                <article>
+                    <div class="date">Janvier 2021</div>
+                    <h3>Stage de 3e à Agirc‑Arrco : Découverte d’une grande organisation</h3>
+                    <div class="article-content">
+                        <p>J’ai découvert le fonctionnement d’une grande institution et réalisé des interviews de collaborateurs.</p>
+                    </div>
+                </article>
+
+                <!-- Mini-entreprise -->
+                <article>
+                    <div class="date">Septembre 2020 – Décembre 2021</div>
+                    <h3>Directrice communication dans une mini‑entreprise : Led’s Go !</h3>
+                    <div class="article-content">
+                        <p>J’ai conçu le site internet de la mini‑entreprise, réalisé un spot publicitaire et assuré la communication externe.</p>
+                    </div>
+                </article>
+
+            </section>
 
             <!-- COLONNE DROITE -->
             <aside>
                 <div class="section-aside">
                     <h4>A propos</h4>
-                    <p style="margin-bottom: 0.8rem;"><strong>Qui suis-je ?</strong></p>
+                    <p><strong>Qui suis‑je ?</strong></p>
                     <p>Passionnée par la logique et l'apprentissage du code, j'ai 18 ans. Bienvenue dans mon espace !</p>
-                    <a href="CV alternance.pdf"
-                           class="btn-cv"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            Télécharger mon CV détaillé
-                            </a>
+                    <a href="CV alternance.pdf" class="btn-cv" target="_blank">Télécharger mon CV détaillé</a>
                 </div>
 
-                 <div class="section-aside">
+                <div class="section-aside">
                     <h4>Mes engagements</h4>
-                    <p style="margin-bottom: 0.8rem;"><strong>Pourquoi s'engager ?</strong></p>
-                    <p>Un engagement étudiant est essentiel afin de montrer l'impact d'un futur ingénieur sur la société </p>
-                    <a href="NOTE_SYNTHESE_LAMANTI_YASMINE.pdf"
-                           class="btn-cv"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            Télécharger ma note de synthèse
-                            </a>
+                    <p><strong>Pourquoi s'engager ?</strong></p>
+                    <p>Un engagement étudiant est essentiel afin de montrer l'impact d'un futur ingénieur sur la société.</p>
+                    <a href="NOTE_SYNTHESE_LAMANTI_YASMINE.pdf" class="btn-cv" target="_blank">Télécharger ma note de synthèse</a>
                 </div>
-
 
                 <div class="section-aside">
                     <h4>Mes points forts</h4>
-                    <div class="project-item">✦ Python </div>
-                    <div class="project-item">✦ Langage C </div>
-                    <div class="project-item">✦ Git / GitHub </div>
-                    <div class="project-item">✦ HTML / CSS </div>
-                    <div class="project-item">✦ Canva </div>
+                    <div class="project-item">✦ Python</div>
+                    <div class="project-item">✦ Langage C</div>
+                    <div class="project-item">✦ Git / GitHub</div>
+                    <div class="project-item">✦ HTML / CSS</div>
+                    <div class="project-item">✦ Canva</div>
                 </div>
             </aside>
+
         </main>
     </div>
 
