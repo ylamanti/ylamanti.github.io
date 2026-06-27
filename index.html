@@ -54,6 +54,17 @@
             font-size: 2.5rem;
             font-weight: 500;
             letter-spacing: -0.02em;
+            
+            /* Alignement du logo et du texte côte à côte */
+            display: flex;
+            align-items: center;
+            gap: 1rem; /* Espace entre le logo et le texte */
+        }
+
+        /* Style pour contrôler la taille du logo */
+        header h1 .logo {
+            height: 45px; /* Ajustez cette valeur si vous voulez le logo plus grand ou plus petit */
+            width: auto;  /* Garde les proportions de votre image */
         }
 
         .nav-links a {
@@ -203,7 +214,11 @@
 
         <header>
             <div class="header-top">
-                <h1>L'Univers de Yasmine</h1>
+                <h1>
+                    <!-- Intégration de votre logo -->
+                    <img src="ylogo.png" alt="Logo Yasmine" class="logo">
+                    L'Univers de Yasmine
+                </h1>
                 <div class="nav-links">
                     <a href="https://github.com/ylamanti" target="_blank">github</a>
                     <a href="https://linkedin.com/in/ylamanti" target="_blank">linkedin</a>
@@ -228,8 +243,7 @@
                         <p>Depuis octobre 2025, je suis bénévole à la Maison des Loisirs et de la Culture de Montigny. Cet engagement me permet de contribuer à la vie locale tout en développant des compétences humaines essentielles.</p>
                         <p>J’aide à l’organisation d’activités culturelles, j’accueille les participants et je soutiens l’équipe d’animation dans la mise en place d’événements.</p>
 
-                        <!-- AJOUT DE LA PARTIE DEMANDÉE -->
-                        <h4>Pourquoi s'engager ?</h4>
+                        <h4>Pourquoi s'engageer ?</h4>
                         <p>Un engagement étudiant est essentiel afin de montrer l'impact d'un futur ingénieur sur la société.</p>
                         <a href="NOTE_SYNTHESE_LAMANTI_YASMINE.pdf" class="btn-cv" target="_blank">Télécharger ma note de synthèse</a>
                     </div>
@@ -358,39 +372,30 @@
             <aside>
 
                 <div class="section-aside">
-    <h4>A propos</h4>
-    <p><strong>Qui suis‑je ?</strong></p>
-    <p>Passionnée par la logique et l'apprentissage du code, j'ai 18 ans. Bienvenue dans mon espace !</p>
+                    <h4>A propos</h4>
+                    <p><strong>Qui suis‑je ?</strong></p>
+                    <p>Passionnée par la logique et l'apprentissage du code, j'ai 18 ans. Bienvenue dans mon espace !</p>
 
-    <a href="CV.pdf" class="btn-cv" target="_blank">Télécharger mon CV</a>
-    <a href="CV alternance.pdf" class="btn-cv" target="_blank">Télécharger mon CV détaillé</a>
-</div>
-
+                    <a href="CV.pdf" class="btn-cv" target="_blank">Télécharger mon CV</a>
+                    <a href="CV alternance.pdf" class="btn-cv" target="_blank">Télécharger mon CV détaillé</a>
+                </div>
 
                 <div class="section-aside">
-    <h4>Mes motivations</h4>
-    <p>Application terrain : Mettre en pratique mes acquis académiques en m'adaptant rapidement à vos méthodes de travail.</p>
+                    <h4>Mes motivations</h4>
+                    <p>Application terrain : Mettre en pratique mes acquis académiques en m'adaptant rapidement à vos méthodes de travail.</p>
+                    <p>Apprentissage et écoute : Développer mes compétences professionnelles en bénéficiant de l'expérience et des conseils de l'équipe.</p>
+                    <p>Soutien operational : Prendre en charge mes missions avec rigueur pour soulager l'équipe et me rendre utile au quotidien.</p>
+                </div>
 
-<p>Apprentissage et écoute : Développer mes compétences professionnelles en bénéficiant de l'expérience et des conseils de l'équipe.</p>
+                <div class="section-aside">
+                    <h4>Mes ambitions</h4>
+                    <p>Dans le cadre de mon cursus, je suis tenue de passer le TOEIC ainsi que le Projet Voltaire. <br>Ces certifications sont essentielles : le TOEIC valide mon niveau d’anglais professionnel, indispensable dans le domaine de l’ingénierie, tandis que le Projet Voltaire atteste de ma maîtrise de la langue française, un atout majeur pour communiquer clairement à l’écrit.</p>
+                    <p>De mon côté, je souhaite aller plus loin en obtenant plusieurs certifications techniques reconnues. <br>Mon objectif est de construire une base solide en réseaux, systèmes, cloud et cybersécurité. <br>Voici l’ordre dans lequel je prévois de les passer :</p>
 
-<p>Soutien opérationnel : Prendre en charge mes missions avec rigueur pour soulager l'équipe et me rendre utile au quotidien.</p>
+                    <a href="certif.pdf" class="btn-cv" target="_blank">Voir les certifications</a>
 
-</div>
-
-                
-                
-               <div class="section-aside">
-    <h4>Mes ambitions</h4>
-    <p>Dans le cadre de mon cursus, je suis tenue de passer le TOEIC ainsi que le Projet Voltaire. <br>Ces certifications sont essentielles : le TOEIC valide mon niveau d’anglais professionnel, indispensable dans le domaine de l’ingénierie, tandis que le Projet Voltaire atteste de ma maîtrise de la langue française, un atout majeur pour communiquer clairement à l’écrit.</p>
-
-    <p>De mon côté, je souhaite aller plus loin en obtenant plusieurs certifications techniques reconnues. <br>Mon objectif est de construire une base solide en réseaux, systèmes, cloud et cybersécurité. <br>Voici l’ordre dans lequel je prévois de les passer :</p>
-
-
-     <a href="certif.pdf" class="btn-cv" target="_blank">Voir les certifications</a>
-                   
-
-    <p>Ces certifications représentent pour moi un parcours structuré et cohérent pour devenir une ingénieure polyvalente, compétente et prête à évoluer dans des environnements techniques exigeants.</p>
-</div>
+                    <p>Ces certifications représentent pour moi un parcours structuré et cohérent pour devenir une ingénieure polyvalente, compétente et prête à évoluer dans des environnements techniques exigeants.</p>
+                </div>
 
             </aside>
 
@@ -399,4 +404,3 @@
 
 </body>
 </html>
-
